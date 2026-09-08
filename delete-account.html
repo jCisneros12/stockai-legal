@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StockAI — Delete Your Account and Data</title>
+<style>
+  :root {
+    --bg: #eef5fc;
+    --card: #ffffff;
+    --text: #1c2733;
+    --muted: #5c6b7a;
+    --accent: #005DB6;
+    --border: #dbe7f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    gap: 12px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  .brand .box { font-size: 1.4rem; }
+  .lang-switch {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--card);
+  }
+  .lang-switch button {
+    border: none;
+    background: transparent;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .lang-switch button.active {
+    background: var(--accent);
+    color: #fff;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-size: 1.05rem;
+    margin: 32px 0 10px;
+    color: var(--accent);
+  }
+  p, li { color: var(--text); }
+  ul, ol { padding-left: 20px; }
+  a { color: var(--accent); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 28px 8px;
+  }
+  .back {
+    display: inline-block;
+    margin: 18px 0 22px;
+  }
+  [data-i18n] { display: none; }
+  [data-i18n].active { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="box">📦</span> StockAI</div>
+    <div class="lang-switch">
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+      <button id="btn-es" onclick="setLang('es')">ES</button>
+    </div>
+  </header>
+
+  <div class="card">
+
+    <!-- EN -->
+    <div data-i18n="en">
+      <h1>Delete your account and data</h1>
+      <p class="updated">Last updated: September 8, 2026</p>
+
+      <p>StockAI doesn't have its own account system — signing in with Google is optional and only used to link your device to a backup. What "account" means here is that optional Google-linked session, together with the backup it creates in your own Google Drive.</p>
+
+      <h2>To delete everything StockAI created</h2>
+      <ol>
+        <li><strong>Open the app</strong> and, if you had cloud backup on, go to <strong>Account → Unlink Google account</strong>. Your business data stays on your device; only the connection to your Google account ends.</li>
+        <li><strong>Revoke StockAI's access to your Google Drive</strong> from <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. This deletes the private backup folder that lived in your Drive — StockAI never had a server, so this is the only place your data existed outside your phone.</li>
+        <li><strong>Uninstall the app</strong> from your device. This erases the local database — every product, movement, supplier, customer, expense, and scheduled expense stored on your phone — immediately and permanently.</li>
+      </ol>
+
+      <h2>Partial deletion, without removing everything</h2>
+      <p>You don't need to go through the steps above to delete only part of your data. From within the app you can:</p>
+      <ul>
+        <li>Delete a single product, movement, supplier, customer, expense, or scheduled expense from its own screen. This removes it from your device and, if backup is on, from your Drive backup on the next sync.</li>
+        <li>Unlink your Google account without uninstalling, to stop the backup while keeping your business data on the device.</li>
+      </ul>
+
+      <h2>What data this removes</h2>
+      <p>Steps 1–3 above remove <strong>all</strong> the data StockAI ever handled about you and your business: every record, and the Google account link. Nothing is retained anywhere — there is no StockAI server, so there's nothing left to delete on our side once you complete steps 2 and 3.</p>
+
+      <p>Questions about this process: <a href="mailto:jcisneros1203@gmail.com">jcisneros1203@gmail.com</a>.</p>
+
+      <a class="back" href="index.html">← Back to the privacy policy</a>
+    </div>
+
+    <!-- ES -->
+    <div data-i18n="es">
+      <h1>Elimina tu cuenta y tus datos</h1>
+      <p class="updated">Última actualización: 8 de septiembre de 2026</p>
+
+      <p>StockAI no tiene un sistema de cuentas propio: iniciar sesión con Google es opcional y solo se usa para vincular tu dispositivo a un respaldo. Lo que aquí llamamos "cuenta" es esa sesión opcional vinculada a Google, junto con el respaldo que crea en tu propio Google Drive.</p>
+
+      <h2>Para eliminar todo lo que StockAI creó</h2>
+      <ol>
+        <li><strong>Abre la app</strong> y, si tenías el respaldo en la nube activo, ve a <strong>Cuenta → Desvincular cuenta de Google</strong>. Los datos de tu negocio se quedan en tu dispositivo; solo termina la conexión con tu cuenta de Google.</li>
+        <li><strong>Revoca el acceso de StockAI a tu Google Drive</strong> desde <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Esto elimina la carpeta privada de respaldo que vivía en tu Drive — StockAI nunca tuvo un servidor propio, así que este es el único lugar donde tus datos existían fuera de tu teléfono.</li>
+        <li><strong>Desinstala la app</strong> de tu dispositivo. Esto borra la base de datos local —cada producto, movimiento, proveedor, cliente, gasto y gasto programado guardados en tu teléfono— de forma inmediata y permanente.</li>
+      </ol>
+
+      <h2>Eliminación parcial, sin borrar todo</h2>
+      <p>No necesitas seguir los pasos anteriores para eliminar solo parte de tus datos. Desde la app puedes:</p>
+      <ul>
+        <li>Eliminar un producto, movimiento, proveedor, cliente, gasto o gasto programado individual desde su propia pantalla. Esto lo quita de tu dispositivo y, si el respaldo está activo, de tu respaldo en Drive en la siguiente sincronización.</li>
+        <li>Desvincular tu cuenta de Google sin desinstalar, para detener el respaldo y conservar los datos de tu negocio en el dispositivo.</li>
+      </ul>
+
+      <h2>Qué datos elimina esto</h2>
+      <p>Los pasos 1 a 3 eliminan <strong>todos</strong> los datos que StockAI manejó sobre ti y tu negocio: cada registro y el vínculo con tu cuenta de Google. Nada queda retenido en ningún lugar: no existe un servidor de StockAI, así que no hay nada más que borrar de nuestro lado una vez completas los pasos 2 y 3.</p>
+
+      <p>Dudas sobre este proceso: <a href="mailto:jcisneros1203@gmail.com">jcisneros1203@gmail.com</a>.</p>
+
+      <a class="back" href="index.html">← Volver a la política de privacidad</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      el.classList.toggle('active', el.getAttribute('data-i18n') === lang);
+    });
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.documentElement.setAttribute('lang', lang);
+    try { localStorage.setItem('stockai-legal-lang', lang); } catch (e) {}
+  }
+
+  (function initLang() {
+    var saved = null;
+    try { saved = localStorage.getItem('stockai-legal-lang'); } catch (e) {}
+    if (saved === 'en' || saved === 'es') {
+      setLang(saved);
+      return;
+    }
+    var deviceLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+    setLang(deviceLang.indexOf('es') === 0 ? 'es' : 'en');
+  })();
+</script>
+</body>
+</html>
