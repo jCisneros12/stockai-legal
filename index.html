@@ -133,6 +133,8 @@
       If the app crashes, Firebase Crashlytics sends a technical report so the problem can be diagnosed and fixed: the error's stack trace, your device model, its Android version, and how much memory and storage were free at that moment. These reports contain no content you entered about your business.</p>
       <p><strong>2.8 Usage analytics</strong><br>
       StockAI uses Firebase Analytics, which automatically collects basic technical and usage data (such as app opens, screen views, session length, device model, and general location derived from your IP address) to understand how the app is used and improve it. This data is not tied to your business records.</p>
+      <p><strong>2.9 Update notices</strong><br>
+      StockAI uses Firebase Remote Config to find out which version is the latest one published on the Play Store, so it can let you know when an update is available. The app only <em>reads</em> a couple of values (the latest version number); it sends none of your business data in the process. Firebase does receive basic technical data about your device to deliver those values, as described in Google's documentation.</p>
 
       <h2>3. Where your data is stored</h2>
       <p><strong>By default, your business data is stored only on your device</strong>, in a local database. Without signing in, none of it leaves your phone. (The crash reports and analytics data described in sections 2.7 and 2.8 are separate from this, and never include your business records.)</p>
@@ -146,6 +148,7 @@
         <li><strong>Google Drive</strong> (backup, into your own account and only if you turn it on)</li>
         <li><strong>Firebase Crashlytics</strong> (technical crash reports — see section 2.7)</li>
         <li><strong>Firebase Analytics</strong> (basic usage data — see section 2.8)</li>
+        <li><strong>Firebase Remote Config</strong> (to tell the app that a new version is available — see section 2.9)</li>
       </ul>
       <p>Your business records — products, movements, suppliers, customers, expenses — only ever go to your own Google Drive, and only if you turn backup on. We do not operate any server that receives them, and they are never used for advertising — StockAI shows no ads.</p>
 
@@ -199,6 +202,8 @@
       Si la app falla, Firebase Crashlytics envía un reporte técnico para poder diagnosticar y corregir el problema: el rastro del error, el modelo de tu dispositivo, su versión de Android y cuánta memoria y almacenamiento había libre en ese momento. Estos reportes no contienen ningún contenido que hayas ingresado sobre tu negocio.</p>
       <p><strong>2.8 Analítica de uso</strong><br>
       StockAI usa Firebase Analytics, que recolecta automáticamente datos técnicos y de uso básicos (como aperturas de la app, pantallas visitadas, duración de la sesión, modelo del dispositivo y ubicación general derivada de tu dirección IP) para entender cómo se usa la app y mejorarla. Estos datos no están vinculados a los registros de tu negocio.</p>
+      <p><strong>2.9 Avisos de actualización</strong><br>
+      StockAI usa Firebase Remote Config para saber cuál es la última versión publicada en la Play Store y poder avisarte cuando hay una actualización disponible. La app únicamente <em>lee</em> un par de valores (el número de la última versión); no envía ningún dato de tu negocio en el proceso. Firebase sí recibe datos técnicos básicos de tu dispositivo para poder entregar esos valores, como se describe en la documentación de Google.</p>
 
       <h2>3. Dónde se guardan tus datos</h2>
       <p><strong>Por defecto, los datos de tu negocio se guardan únicamente en tu dispositivo</strong>, en una base de datos local. Sin iniciar sesión, nada de esto sale de tu teléfono. (Los reportes de fallos y los datos de analítica descritos en las secciones 2.7 y 2.8 son aparte, y nunca incluyen los registros de tu negocio.)</p>
@@ -212,6 +217,7 @@
         <li><strong>Google Drive</strong> (respaldo, en tu propia cuenta y solo si lo activas)</li>
         <li><strong>Firebase Crashlytics</strong> (reportes técnicos de fallos — ver sección 2.7)</li>
         <li><strong>Firebase Analytics</strong> (datos básicos de uso — ver sección 2.8)</li>
+        <li><strong>Firebase Remote Config</strong> (para avisarle a la app que hay una versión nueva — ver sección 2.9)</li>
       </ul>
       <p>Los registros de tu negocio —productos, movimientos, proveedores, clientes, gastos— solo van a tu propio Google Drive, y solo si activas el respaldo. No operamos ningún servidor que los reciba, y nunca se usan con fines publicitarios: StockAI no muestra anuncios.</p>
 
